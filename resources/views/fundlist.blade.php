@@ -42,14 +42,25 @@
           {{'Refunded' }}
           @endif
           </td>
-          <td>{{$data->name}} </td>
+        
+
+          <td>
+     
+                 @if($data->Category)  
+                {{$data->Category->name}} 
+
+                @endif 
+      
+          </td>
+    
+
         <td><a href="{{url('editfund/'.$data->id)}}" class="btn btn-warning">Edit </a></td>
         <td> <a href="{{url('deletefund/'.$data->id)}}" onclick= "return confirm(' Are you sure you want to Delete')"  class="btn btn-danger">Delete </a></td>
     
 
  
       </tr>
- @endforeach
+   @endforeach
     </tbody>
   </table>
 

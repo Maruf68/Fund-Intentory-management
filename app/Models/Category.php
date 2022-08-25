@@ -11,6 +11,13 @@ class Category extends Model
     public $timestamps = false;
 
     public function fundlist(){
-        return $this->belongsTo(Fundlist::class);
+        return $this->hasOne(Fundlist::class);
     }
+
+
+    // public function fundlist(){
+    //     return $this->belongsTo(Fundlist::class);
+    // }
+
+
 }

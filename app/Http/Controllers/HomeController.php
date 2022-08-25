@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Fundlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -71,8 +72,8 @@ class HomeController extends Controller
     }
 
     public function  submitfund(Request $request){
-      
-
+            
+             
         $data = new Fundlist;
 
         $data->name=$request->name;
@@ -89,8 +90,7 @@ class HomeController extends Controller
 
         $data->d_phone=$request->d_phone;
 
-
-        // $data->category_id=$request->category_id;
+        $data->category_id=$request->category_id;
         
         // var_dump($data->category_id);
         // exit();
@@ -188,7 +188,14 @@ class HomeController extends Controller
 
     public function fundlist(){
         $showdata = Fundlist::Simplepaginate(5);
-        return view('fundlist')->with('showdata',$showdata);
+        
+        $category= Category::where('status' ,'=', 1)->get();
+
+
+  
+
+
+        return view('fundlist')->with('showdata',$showdata)->with('category',$category);
     }
 
     public function deletefund($id=null){
