@@ -151,7 +151,6 @@ class HomeController extends Controller
         $data->save();
         return redirect(route('userlist'));
 
-
     }
 
 

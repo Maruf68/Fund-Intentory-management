@@ -4,7 +4,7 @@
 
 
 
-<table style="width:10px " class="table table-striped">
+<table style="width:10px; background-color:#F3F6F9 " class="table table-bordered">
     <thead>
      
       <tr>
@@ -17,6 +17,7 @@
         <th scope="col">Donor_Email</th>
         <th scope="col">Donor_Phone</th>
         <th scope="col">Status</th>
+        <th scope="col">Category</th>
         <th scope="col">Modify</th>
         <th scope="col">Delete</th>
       </tr>
@@ -41,8 +42,10 @@
           {{'Refunded' }}
           @endif
           </td>
+          <td>{{$data->name}} </td>
         <td><a href="{{url('editfund/'.$data->id)}}" class="btn btn-warning">Edit </a></td>
         <td> <a href="{{url('deletefund/'.$data->id)}}" onclick= "return confirm(' Are you sure you want to Delete')"  class="btn btn-danger">Delete </a></td>
+    
 
  
       </tr>

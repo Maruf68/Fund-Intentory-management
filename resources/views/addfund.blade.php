@@ -51,8 +51,7 @@
 
 
 
-
-      {{-- <div class="form-group my-2">
+      <div class="form-group my-2">
         <label for="exampleInputPassword1">Category</label>
        <select name="category_id" class="form-control"> 
 
@@ -62,9 +61,9 @@
          <option value="{{$item->id}}">{{$item->name}}</option>
          @endforeach
        
-  </select>
+     </select>
 
-      </div> --}}
+      </div>
 
 
 

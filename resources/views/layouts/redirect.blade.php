@@ -112,8 +112,8 @@
  
  
          <!-- Sidebar Start -->
-         <div class="sidebar pe-4 pb-3">
-             <nav class="navbar bg-light navbar-light">
+         <div style="padding-right: 50px" class=" sidebar pe-4 pb-3">
+             <nav class=" navbar bg-light navbar-light">
                  <a href="{{url('/admin')}}" class="navbar-brand mx-4 mb-3">
                      <h3 class="text-primary"><i class="fa-solid fa-hammer"></i>  {!!nl2br('DASHMIN')!!}   </h3>
                  </a>
@@ -265,7 +265,7 @@
  
              <!-- Blank Start -->
              <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-flex-start justify-content-left mx-0">                  
+                <div class="row vh-120 bg-light rounded align-items-flex-start justify-content-left mx-0">                  
                      <div class="col-md-6 text-center">
                        
                          @yield('content')
