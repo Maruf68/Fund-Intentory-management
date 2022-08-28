@@ -192,9 +192,6 @@ class HomeController extends Controller
         $category= Category::where('status' ,'=', 1)->get();
 
 
-  
-
-
         return view('fundlist')->with('showdata',$showdata)->with('category',$category);
     }
 
@@ -210,7 +207,8 @@ class HomeController extends Controller
 
     public function editfund($id=null){
         $showData = Fundlist::find($id);
-        return view('editpage')->with('showData',$showData);
+        $category= Category::where('status' ,'=', 1)->get();
+        return view('editpage')->with('showData',$showData)->with('category',$category);
 
     }
 
@@ -232,6 +230,9 @@ class HomeController extends Controller
 
         $data->d_phone=$request->d_phone;
 
+        $data->category_id=$request->category_id;
+
+
         $data->status=$request->status;
 
         $data->save();
@@ -250,7 +251,8 @@ class HomeController extends Controller
     public function editcategory($id=null){
 
         $editdata = Category::find($id);
-        return view('editcategory')->with('editdata',$editdata);
+        $edit = Category::all();
+        return view('editcategory')->with('editdata',$editdata)->with('edit',$edit);
     }
 
     public function updatecategory(Request $request,$id){

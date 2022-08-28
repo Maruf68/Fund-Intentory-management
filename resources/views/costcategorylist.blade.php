@@ -1,19 +1,21 @@
+
 @extends('layouts.app')
 
 @section('content')
 
 <div class="  mb-5 pb-5">
-    <h3 class="change" style="color: rgb(95, 197, 197)" > <strong> Category List</strong></h3>
+    <h3 class="hon" style="color: rgb(95, 197, 197)" > <strong>Cost Category List</strong></h3>
 
-<style>
-      .change {
-        font-family: "Audiowide", sans-serif;
-    }
-</style>
+    <style>
+        .hon {
+          font-family: "Audiowide", sans-serif;
+      }
+  </style>
 
-<table class="table table-striped my-4 ">
+    
+<table class="table table-striped my-4">
     <thead>
-      <tr class="table-success">
+      <tr class="table-danger">
         <th scope="col">No.</th>
         <th scope="col">Name</th>
         <th scope="col">Status</th>
@@ -37,8 +39,8 @@
         @endif
        </td>
 
-       <td><a href="{{url('editcategory/'.$data->id)}}" class="btn btn-warning">Edit </a></td>
-       <td> <a href="{{url('deletecategory/'.$data->id)}}" onclick= "return confirm(' Are you sure you want to Delete')"  class="btn btn-danger">Delete </a></td>
+       <td><a href="{{url('editcostcategory/'.$data->id)}}" class="btn btn-warning">Edit </a></td>
+       <td> <a href="{{url('deletecostcategory/'.$data->id)}}" onclick= "return confirm(' Are you sure you want to Delete')"  class="btn btn-danger">Delete </a></td>
       </tr>
  
       @endforeach
@@ -50,3 +52,6 @@
 </div>
 
 @stop
+
+
+

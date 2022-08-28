@@ -7,7 +7,7 @@
 <table style="width:10px; background-color:#F3F6F9 " class="table table-bordered">
     <thead>
      
-      <tr>
+      <tr class="table-info">
         <th scope="col">No.</th>
         <th scope="col">Name</th>
         <th scope="col">Amount</th>
@@ -19,12 +19,12 @@
         <th scope="col">Status</th>
         <th scope="col">Category</th>
         <th scope="col">Modify</th>
-        <th scope="col">Delete</th>
+        <th scope="col">Remove</th>
       </tr>
     </thead>
     <tbody>
         @foreach($showdata as $key=>$data)
-      <tr>
+      <tr >
         <th scope="row">{{$key+1}}</th>
         <td>{{$data->name}}</td>
         <td>{{$data->amount}}</td>

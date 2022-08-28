@@ -2,26 +2,27 @@
 
 @section('content')
 
-
-   <h3 style="color: rgb(95, 197, 197)" >{{'Add Category'}}</h3>
+    
+   <h3 style="color: rgb(95, 197, 197)" >{{'Add Cost Category'}}</h3>
 
    
-   <form  action="{{url('/submitcategory')}}" method="post" class="my-3">
+   <form  action="{{url('/costcategory')}}" method="post" class="my-3">
     @csrf
 
-    @if (session('cat'))
+    @if (session('costcategory'))
     <div class="alert alert-success" role="alert">
-        {{ Session::get('cat') }}
+        {{ Session::get('costcategory') }}
          </div>
          @endif
 
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Category Name</label>
+        <label for="exampleInputPassword1" class="form-label"> Name</label>
         <input type="text" name="name" class="form-control" id="exampleInputPassword1">
       </div>
 
+
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Category Status </label>
+      <label for="exampleInputEmail1" class="form-label"> Status </label>
       <select  name="status" class="form-control"> 
         <option value="1">Active</option>
         <option value="0">Inactive</option> 
@@ -35,7 +36,4 @@
    
  
   </form>
-
-
 @stop
-  

@@ -18,11 +18,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('amount');
-            $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->integer('project_id')->unsigned()->nullable();
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+
+            
             // $table->foreignId('project_id')->constrained();
             $table->string('upload');
-            $table->dateTime('date');
+            $table->integer('cost_category_id')->unsigned()->nullable();
+            $table->foreign('cost_category_id')->references('id')->on('cost_categories');
+          
         });
     }
 
@@ -36,3 +40,6 @@ return new class extends Migration
         Schema::dropIfExists('cost_lists');
     }
 };
+
+
+

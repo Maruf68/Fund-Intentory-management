@@ -19,7 +19,7 @@
     <tbody>
         @foreach ($showData as $key=>$data)
       <tr>
-        <th scope="row">{{$key}}</th>
+        <th scope="row">{{$key+1}}</th>
         <td>{{$data->name}}</td>
         <td>{{$data->email}}</td>
         <td>{{$data->created_at}}</td>

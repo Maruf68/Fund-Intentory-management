@@ -51,19 +51,20 @@
         <input type="text" value="{{$showData->d_phone}}" name="d_phone"  class="form-control" id="exampleInputPassword1" placeholder="Enter Donor phone number">
       </div>
 
-      {{-- <div class="form-group my-2">
+      <div class="form-group my-2">
         <label for="exampleInputPassword1">Category</label>
-       <select name="category" class="form-control"> 
+       <select name="category_id" class="form-control"> 
 
 
 
          @foreach ($category as $item)
-         <option value="{{$item->id}}">{{$item->name}}</option>
+         <option value="{{$item->id}}" selected >{{$item->name}}</option>
          @endforeach
        
-  </select>
+     </select>
 
-      </div> --}}
+      </div>
+
 
 
 

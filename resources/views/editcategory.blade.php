@@ -14,11 +14,17 @@
         <input type="text" value="{{$editdata->name}}" name="name" class="form-control" id="exampleInputPassword1">
       </div>
 
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Category Status </label>
-      <select name="status" class="form-control"> 
 
+
+
+    
+            
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Category Status </label>
+          <select name="status" class="form-control"> 
         
+      
+
         <option value="1">Active</option>
 
 
@@ -27,6 +33,7 @@
 
       </select>
     </div>
+
 
 
 

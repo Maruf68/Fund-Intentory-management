@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,33 @@ Route::post('/updatecategory/{id}',[HomeController::class,'updatecategory']);
 
 
 
+//project
+
+Route::get('/costcategory',[ProjectController::class,'costcategory']);
+
+Route::post('/costcategory',[ProjectController::class,'submitcostcategory']);
+
+
+Route::get('/costcategorylist',[ProjectController::class,'costcategorylist']);
+
+
+Route::get('/deletecostcategory/{id}',[ProjectController::class,'deletecostcategory']);
+
+Route::get('/editcostcategory/{id}',[ProjectController::class,'editcostcategory']);
+
+Route::post('/updatecostcategory/{id}',[ProjectController::class,'updatecostcategory']);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,6 +87,7 @@ Route::get('/delete/{id}',[HomeController::class,'deleteData']);
 
 
 Route::get('/deletefund/{id}',[HomeController::class,'deletefund']);
+
 
 
 //user edit
