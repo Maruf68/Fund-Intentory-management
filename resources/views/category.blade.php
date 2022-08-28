@@ -3,8 +3,14 @@
 @section('content')
 
 
-   <h3 style="color: rgb(95, 197, 197)" >{{'Add Category'}}</h3>
+   <h3 class="header" style="color: rgb(95, 197, 197)" ><strong>{{'Add Category'}}</strong></h3>
 
+
+   <style>
+    .header{
+      font-family: "Audiowide", sans-serif;
+    }
+  </style>
    
    <form  action="{{url('/submitcategory')}}" method="post" class="my-3">
     @csrf

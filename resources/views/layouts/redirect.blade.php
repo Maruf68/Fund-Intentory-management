@@ -59,7 +59,6 @@
 
 
 
-
  
 
 
@@ -112,8 +111,8 @@
  
  
          <!-- Sidebar Start -->
-         <div style="padding-right: 50px" class=" sidebar pe-4 pb-3">
-             <nav class=" navbar bg-light navbar-light">
+         <div class="sidebar pe-4 pb-3">
+             <nav class="navbar bg-light navbar-light">
                  <a href="{{url('/admin')}}" class="navbar-brand mx-4 mb-3">
                      <h3 class="text-primary"><i class="fa-solid fa-hammer"></i>  {!!nl2br('DASHMIN')!!}   </h3>
                  </a>
@@ -129,28 +128,43 @@
                  </div>
                  <div class="navbar-nav w-100">
                      <a href="{{url('/admin')}}" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+ 
                      <div class="nav-item dropdown">
                          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Fund</a>
                          <div class="dropdown-menu bg-transparent border-0">
-                             <a href="{{url('category')}}" class="dropdown-item">Category</a>
-                             <a href="{{url('categorylist')}}" class="dropdown-item">Category list</a>
-                             <a href="{{url('addfund')}}" class="dropdown-item">AddFund</a>         
-                             <a href="{{url('fundlist')}}" class="dropdown-item">Fundlist</a>         
+                             <a href="{{url('category')}}" onclick="myFunction()" id="one" class="dropdown-item holder">Category</a>
+                             <a href="{{url('categorylist')}}" id="two" class="dropdown-item holder">Category list</a>
+                             <a href="{{url('addfund')}}" id="three" class="dropdown-item holder">AddFund</a>         
+                             <a href="{{url('fundlist')}}" id="four" class="dropdown-item holder">Fundlist</a>         
                          </div>
                      </div>
-                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+ 
+                  
+
+ 
+    
+ 
+ 
+                     {{-- <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a> --}}
                      <a href="{{url('user')}}"    class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add user</a>
                      <a href="{{url('userlist')}}"  class="nav-item nav-link"><i class="fa fa-table me-2"></i>Userlist</a>
-                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+
+
                      <div class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                         <div class="dropdown-menu bg-transparent border-0">
-                             <a href="signin.html" class="dropdown-item">Sign In</a>
-                             <a href="signup.html" class="dropdown-item">Sign Up</a>
-                             <a href="404.html" class="dropdown-item">404 Error</a>
-                             <a href="blank.html" class="dropdown-item active">Blank Page</a>
-                         </div>
-                     </div>
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Project Costing</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="{{url('costcategory')}}"  class="dropdown-item">Add Cost Category</a>
+                            <a href="{{url('costcategorylist')}}" class="dropdown-item">Cost Category List </a>
+                            <a href="404.html" class="dropdown-item">Add Project </a>
+                            <a href="404.html" class="dropdown-item">Project List</a>
+                            <a href="blank.html" class="dropdown-item ">Add Cost List</a>
+                            <a href="blank.html" class="dropdown-item ">Cost List</a>
+                        </div>
+                    </div>
+
+                    
+                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+               
                  </div>
              </nav>
          </div>
@@ -158,7 +172,7 @@
  
  
  
-      
+   
  
        
  
@@ -282,7 +296,7 @@
  
  
              <!-- Footer Start -->
-             <div class="container-fluid pt-4 px-4 fixed">
+             <div class="container-fluid pt-4 px-4">
                  <div class="bg-light rounded-top p-4">
                      <div class="row">
                          <div class="col-12 col-sm-6 text-center text-sm-start">
@@ -298,12 +312,6 @@
              <!-- Footer End -->
          </div>
          <!-- Content End -->
-         <style>
-            .fixed{
-              position: static;
-              margin-top:260px;
-            }
-         </style>
  
  
          <!-- Back to Top -->
@@ -323,6 +331,7 @@
  
      <!-- Template Javascript -->
      <script src="/js/main.js"></script>
+
      
  
  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>

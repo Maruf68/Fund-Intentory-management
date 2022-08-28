@@ -6,6 +6,7 @@
    <h3 style="color: rgb(95, 197, 197)" >{{'Edit Cost Category'}}</h3>
 
    
+   
    <form  action="{{url('/updatecostcategory/'.$showData->id)}}" method="post" class="my-3">
     @csrf
 

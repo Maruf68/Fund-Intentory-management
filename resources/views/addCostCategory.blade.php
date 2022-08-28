@@ -3,8 +3,14 @@
 @section('content')
 
     
-   <h3 style="color: rgb(95, 197, 197)" >{{'Add Cost Category'}}</h3>
+   <h3 class="heart" style="color: rgb(95, 197, 197)" ><strong>{{'Add Cost Category'}}</strong> </h3>
 
+
+   <style>
+    .heart{
+      font-family: "Audiowide", sans-serif;
+    }
+  </style>
    
    <form  action="{{url('/costcategory')}}" method="post" class="my-3">
     @csrf

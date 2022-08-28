@@ -5,11 +5,13 @@
 <div class="  mb-5 pb-5">
     <h3 class="change" style="color: rgb(95, 197, 197)" > <strong> Category List</strong></h3>
 
+
 <style>
       .change {
         font-family: "Audiowide", sans-serif;
     }
 </style>
+
 
 <table class="table table-striped my-4 ">
     <thead>
