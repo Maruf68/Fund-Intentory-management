@@ -97,6 +97,12 @@
  
      <!-- Template Stylesheet -->
      <link href="/css/style.css" rel="stylesheet">
+
+     {{-- Bootstrap font style --}}
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+     
  </head>
  
  <body>
@@ -256,7 +262,14 @@
                      <div class="nav-item dropdown">
                          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                              <img class="rounded-circle me-lg-2" src="/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                             <span class="d-none d-lg-inline-flex">Admin</span>
+                             <span class="d-none d-lg-inline-flex">
+                                {{-- @foreach ($printname as $item)
+                                    
+                              
+                                {{$item->name}}
+                                @endforeach
+                            </span> --}}
+                            Admin
                          </a>
                          <div class="dropdown-menu dropdown-menu-end bg-red border-0 rounded-0 rounded-bottom m-0">
                               <a href="#" class="dropdown-item">My Profile</a>

@@ -66,10 +66,6 @@
       </div>
 
 
-
-
-
-
       <div class="form-group my-2">
         <label for="exampleInputPassword1">Payment status</label>
        <select name="status" class="form-control"> 

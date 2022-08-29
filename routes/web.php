@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
@@ -19,6 +20,8 @@ use App\Http\Controllers\ProjectController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 
 
@@ -138,12 +141,38 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
-Route::middleware([
+
+
+ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
+   
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+
+
+
+
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified'
+// ])->group(function () {
+  
+//     Route::get('/dashboard/{id}', function ($id=null) {  
+//         $printname = User::find($id); 
+//         return view('dashboard')->with('printname',$printname);
+//     })->name('dashboard');
+// });
+
+
+
+
+

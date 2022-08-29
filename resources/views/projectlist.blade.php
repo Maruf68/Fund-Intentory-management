@@ -4,6 +4,12 @@
 
 <h3 class="change" style="color: rgb(95, 197, 197)" > <strong> Project List</strong></h3>
 
+<style>
+  .change {
+    font-family: "Audiowide", sans-serif;
+}
+</style>
+
 
 <table style="width:10px; background-color:#F3F6F9 " class="table table-bordered my-5">
     <thead>
