@@ -155,10 +155,10 @@
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="{{url('costcategory')}}"  class="dropdown-item">Add Cost Category</a>
                             <a href="{{url('costcategorylist')}}" class="dropdown-item">Cost Category List </a>
-                            <a href="404.html" class="dropdown-item">Add Project </a>
-                            <a href="404.html" class="dropdown-item">Project List</a>
-                            <a href="blank.html" class="dropdown-item ">Add Cost List</a>
-                            <a href="blank.html" class="dropdown-item ">Cost List</a>
+                            <a href="{{url('addproject')}}" class="dropdown-item">Add Project </a>
+                            <a href="#" class="dropdown-item">Project List</a>
+                            <a href="#" class="dropdown-item ">Add Cost List</a>
+                            <a href="#" class="dropdown-item ">Cost List</a>
                         </div>
                     </div>
 

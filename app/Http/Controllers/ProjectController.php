@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Session;
+use App\Models\User;
+use App\Models\Project;
 use App\Models\CostCategory;
 use Illuminate\Http\Request;
 
@@ -65,5 +67,29 @@ class ProjectController extends Controller
 
         return redirect(url('costcategorylist'));
     
+     }
+
+     public function addproject(){
+      $userdata= User::where('role' ,'=', 2)->get();
+      return view('addproject')->with('userdata',$userdata);
+     }
+
+
+     public function postproject(Request $request){
+
+      $data = new Project;
+
+      $data->name=$request->name;
+
+      $data->description=$request->description;
+
+      $data->user_id=$request->user_id;
+
+      $data->save();
+
+      session()->flash('Project', 'Project Added');
+
+      return redirect()->back();
+
      }
 }

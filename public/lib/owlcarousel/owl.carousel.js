@@ -2964,7 +2964,7 @@
 			difference = this._pages.length - this._controls.$absolute.children().length;
 
 			if (settings.dotsData && difference !== 0) {
-				this._controls.$absolute.html(this._templates.join(''));
+				this._controls.$absolute.html(this._templates.join('dropdown-item holder'));
 			} else if (difference > 0) {
 				this._controls.$absolute.append(new Array(difference + 1).join(this._templates[0]));
 			} else if (difference < 0) {

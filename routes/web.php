@@ -22,6 +22,8 @@ Route::get('/', function () {
 
 
 
+//user
+
 Route::get('/redirects',[HomeController::class,'index']);
 Route::post('/adduser',[HomeController::class,'adduser']);
 
@@ -38,6 +40,14 @@ Route::get('/fundlist',[HomeController::class,'fundlist']);
 
 Route::get('/userlist',[HomeController::class,'showuser'])->name('userlist');
 
+Route::get('/delete/{id}',[HomeController::class,'deleteData']);
+
+
+Route::get('/deletefund/{id}',[HomeController::class,'deletefund']);
+
+
+
+
 //category
 
 Route::get('/category',[HomeController::class,'category']);
@@ -52,12 +62,11 @@ Route::post('/updatecategory/{id}',[HomeController::class,'updatecategory']);
 
 
 
-//project
+//costcategory
 
 Route::get('/costcategory',[ProjectController::class,'costcategory']);
 
 Route::post('/costcategory',[ProjectController::class,'submitcostcategory']);
-
 
 Route::get('/costcategorylist',[ProjectController::class,'costcategorylist']);
 
@@ -69,24 +78,13 @@ Route::get('/editcostcategory/{id}',[ProjectController::class,'editcostcategory'
 Route::post('/updatecostcategory/{id}',[ProjectController::class,'updatecostcategory']);
 
 
+//project
+
+Route::get('/addproject',[ProjectController::class,'addproject']);
+
+Route::post('/postproject',[ProjectController::class,'postproject']);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/delete/{id}',[HomeController::class,'deleteData']);
-
-
-Route::get('/deletefund/{id}',[HomeController::class,'deletefund']);
 
 
 
@@ -111,7 +109,7 @@ Route::post('/updatefund/{id}',[HomeController::class,'updatefund']);
 
 
 
-
+//auth
 
 
 Route::group(['middleware' => ['auth']], function() {
