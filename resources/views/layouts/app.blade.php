@@ -156,7 +156,7 @@
                             <a href="{{url('costcategory')}}"  class="dropdown-item">Add Cost Category</a>
                             <a href="{{url('costcategorylist')}}" class="dropdown-item">Cost Category List </a>
                             <a href="{{url('addproject')}}" class="dropdown-item">Add Project </a>
-                            <a href="#" class="dropdown-item">Project List</a>
+                            <a href="{{url('projectlist')}}" class="dropdown-item">Project List</a>
                             <a href="#" class="dropdown-item ">Add Cost List</a>
                             <a href="#" class="dropdown-item ">Cost List</a>
                         </div>

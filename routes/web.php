@@ -85,6 +85,21 @@ Route::get('/addproject',[ProjectController::class,'addproject']);
 Route::post('/postproject',[ProjectController::class,'postproject']);
 
 
+Route::get('/projectlist',[ProjectController::class,'projectlist']);
+
+Route::get('/deleteproject/{id}',[ProjectController::class,'deleteproject']);
+
+
+Route::get('/editproject/{id}',[ProjectController::class,'editproject']);
+
+Route::post('/updateproject/{id}',[ProjectController::class,'updateproject']);
+
+
+
+
+
+
+
 
 
 

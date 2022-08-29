@@ -3,7 +3,7 @@
 @section('content')
 
     
-   <h3 class="heart" style="color: rgb(95, 197, 197)" ><strong>{{'Add Project'}}</strong> </h3>
+   <h3 class="heart" style="color: rgb(95, 197, 197)" ><strong>{{'Update Project'}}</strong> </h3>
 
 
    <style>
@@ -12,20 +12,20 @@
     }
   </style>
    
-   <form  action="{{url('postproject')}}" method="post" class="my-3">
+   <form  action="{{url('/updateproject/'.$editData->id)}}" method="post" class="my-3">
     @csrf
 
 
 
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"> Name</label>
-        <input type="text" name="name" class="form-control" id="exampleInputPassword1">
+        <input type="text" value="{{$editData->name}}" name="name" class="form-control" id="exampleInputPassword1">
       </div>
 
 
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"> Description</label>
-        <input type="text" name="description" class="form-control" id="exampleInputPassword1">
+        <input type="text" value="{{$editData->description}}" name="description" class="form-control" id="exampleInputPassword1">
       </div>
 
 
@@ -36,7 +36,7 @@
         @foreach ($userdata as $item)
             
     
-        <option value="{{$item->id}}">{{$item->name}}</option>
+        <option value="{{$item->id}}" selected>{{$item->name}}</option>
 
         @endforeach
       
@@ -54,7 +54,7 @@
 
 
 
-      <button  type="submit" class="btn btn-primary">Add</button>
+      <button  type="submit" class="btn btn-primary">Update</button>
   
    
  

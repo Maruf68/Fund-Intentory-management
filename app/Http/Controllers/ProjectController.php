@@ -87,9 +87,53 @@ class ProjectController extends Controller
 
       $data->save();
 
-      session()->flash('Project', 'Project Added');
-
       return redirect()->back();
 
      }
+
+
+     public function projectlist(){
+
+      $showdata = Project::Simplepaginate(5);
+        
+      $category= User::where('role' ,'=', 2)->get();
+
+
+      return view('projectlist')->with('showdata',$showdata)->with('category',$category);
+     }
+
+
+     public function deleteproject($id=null){
+          $deletedata=Project::find($id);
+          $deletedata->delete();
+
+          return redirect()->back();
+          
+     }
+
+
+     public function editproject($id=null){
+
+      $editData = Project::find($id);
+      $userdata = User::where('role', '=', '2')->get();
+
+      return view('editproject')->with('editData',$editData)->with('userdata',$userdata);
+     }
+
+     public function updateproject(Request $request,$id){
+
+      $data = Project::find($id);
+
+      $data->name=$request->name;
+
+      $data->description=$request->description;
+
+      $data->user_id=$request->user_id;
+
+      $data-> save();
+
+      return redirect(url('projectlist'));
+
+     }
+
 }

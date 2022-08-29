@@ -22,13 +22,13 @@
          @endif
 
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label"> Name</label>
+        <label for="exampleInputPassword1" class="form-label">Cost Name</label>
         <input type="text" name="name" class="form-control" id="exampleInputPassword1">
       </div>
 
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label"> Status </label>
+      <label for="exampleInputEmail1" class="form-label">Cost Status </label>
       <select  name="status" class="form-control"> 
         <option value="1">Active</option>
         <option value="0">Inactive</option> 
