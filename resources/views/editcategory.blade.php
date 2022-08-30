@@ -23,12 +23,23 @@
           <label for="exampleInputEmail1" class="form-label">Category Status </label>
           <select name="status" class="form-control"> 
         
-      
+      {{-- @foreach ($edit as $item) --}}
+          
+   
 
-        <option value="1">Active</option>
+        <option value="0" @if($editdata->status==0) selected @endif >{{'Inactive'}}
+        
+        </option>
+
+        <option value="1" @if($editdata->status==1) selected @endif>{{'Active'}}
+        
+        </option>
 
 
-        <option value="0">Inactive</option> 
+
+        {{-- @endforeach --}}
+
+        {{-- <option value="0">Inactive</option>  --}}
 
 
       </select>

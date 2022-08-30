@@ -58,7 +58,7 @@
 
 
          @foreach ($category as $item)
-         <option value="{{$item->id}}" selected >{{$item->name}}</option>
+         <option value="{{$item->id}}" @if($item->id==$showData->category_id) selected @endif>{{$item->name}}</option>
          @endforeach
        
      </select>
