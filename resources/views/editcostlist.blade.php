@@ -39,7 +39,7 @@
                 
          
 
-          <option value="{{$item->id}}">{{$item->name}}</option>
+          <option value="{{$item->id}}" @if($item->id==$showData->project_id) selected @endif>{{$item->name}}</option>
 
           @endforeach
 
@@ -63,7 +63,7 @@
             @foreach ($cost_category as $data)
                 
            
-          <option value="{{$data->id}}">{{$data->name}}</option>
+          <option value="{{$data->id}}" @if($data->id==$showData->cost_category_id) selected @endif >{{$data->name}}</option>
           @endforeach
         </select>
       </div>
