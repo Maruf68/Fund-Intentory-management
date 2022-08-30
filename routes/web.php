@@ -100,7 +100,23 @@ Route::post('/updateproject/{id}',[ProjectController::class,'updateproject']);
 
 
 
+//costlist
 
+Route::get('/addcostlist',[ProjectController::class,'addcostlist']);
+
+Route::post('/postcostlist',[ProjectController::class,'postcostlist']);
+
+
+Route::get('/costlist',[ProjectController::class,'costlist']);
+
+Route::get('/download/{upload}',[ProjectController::class,'download']);
+
+
+Route::get('/deletecostlist/{id}',[ProjectController::class,'deletecostlist']);
+
+Route::get('/editcostlist/{id}',[ProjectController::class,'editcostlist']);
+
+Route::post('/updatecostlist/{id}',[ProjectController::class,'updatecostlist']);
 
 
 

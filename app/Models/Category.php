@@ -14,6 +14,8 @@ class Category extends Model
         return $this->hasOne(Fundlist::class);
     }
 
+   
+
 
     // public function fundlist(){
     //     return $this->belongsTo(Fundlist::class);

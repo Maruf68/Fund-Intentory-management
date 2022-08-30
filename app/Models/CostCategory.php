@@ -9,4 +9,9 @@ class CostCategory extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    public function Costlist(){
+        return $this->hasOne(CostList::class);
+    }
+
 }

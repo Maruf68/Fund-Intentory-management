@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Session;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\CostList;
 use App\Models\CostCategory;
 use Illuminate\Http\Request;
 
@@ -136,4 +137,116 @@ class ProjectController extends Controller
 
      }
 
+     public function addcostlist(){
+
+      $projectdata = Project::all();
+
+      $CostCategorydata = CostCategory::where('status', '=','1')->get();
+      return view('addcostlist')->with('projectdata',$projectdata)->with('CostCategorydata',$CostCategorydata);
+     }
+
+     public function postcostlist(Request $request){
+
+      $data = new CostList;
+
+      $data->name=$request->name;
+      $data->amount=$request->amount;
+      $data->project_id=$request->project_id;
+
+ 
+      $file = $request->upload;
+      
+      $filename=time().'.'.$file->getClientOriginalExtension();
+
+      $request->upload->move('assets',$filename);
+
+      $data->upload=$filename;
+
+
+
+
+
+      $data->cost_category_id=$request->cost_category_id;
+
+
+      $data->save();
+      
+      return redirect()->back();
+
+
+     }
+
+     public function costlist(){
+      $showdata = CostList::Simplepaginate(4);
+      return view('costlist')->with('showdata',$showdata);
+     }
+
+
+     public function download(Request $request,$upload)
+
+     {
+  
+       return response()->download(public_path('assets/'.$upload));
+  
+     }
+
+
+     public function deletecostlist($id=null){
+      $deletedata=CostList::find($id);
+      $deletedata->delete();
+
+      return redirect()->back();
+
+     }
+
+     public function editcostlist($id=null){
+      $showData = CostList::find($id);
+      $project = Project::all();
+      $cost_category = CostCategory::where('status', '=' , '1')->get();
+      return view('editcostlist')->with('showData',$showData)->with('project',$project)->with('cost_category',$cost_category);
+     }
+
+
+     public function updatecostlist(Request $request,$id){
+
+   
+
+       
+      $data = CostList::find($id);
+     
+
+
+      $data->name=$request->name;
+
+      $data->amount=$request->amount;
+
+      $data->project_id=$request->project_id;
+
+
+      // $data->upload=$request->upload;
+
+
+      $upload=$request->upload;
+  
+
+      if($upload){
+
+         $filename=time().'.'.$upload->getClientOriginalExtension();
+
+         $request->upload->move('assets',$filename);
+   
+         $data->upload=$filename;
+      }
+      else{
+     $data->upload=$request->old_img;
+      }
+
+      
+
+      $data->cost_category_id=$request->cost_category_id;
+
+      $data-> save();
+
+      return redirect(url('costlist'));
+     }
 }

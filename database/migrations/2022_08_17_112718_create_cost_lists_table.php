@@ -26,6 +26,9 @@ return new class extends Migration
             $table->string('upload');
             $table->integer('cost_category_id')->unsigned()->nullable();
             $table->foreign('cost_category_id')->references('id')->on('cost_categories');
+
+            $table->timestamps();
+    
           
         });
     }
