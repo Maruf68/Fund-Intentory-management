@@ -242,11 +242,14 @@ class ProjectController extends Controller
       }
 
       
-
       $data->cost_category_id=$request->cost_category_id;
 
       $data-> save();
 
       return redirect(url('costlist'));
+     }
+
+     public function balance(){
+      return view('balancesheet');
      }
 }

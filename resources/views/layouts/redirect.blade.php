@@ -120,7 +120,7 @@
          <div class="sidebar pe-4 pb-3">
              <nav class="navbar bg-light navbar-light">
                  <a href="{{url('/admin')}}" class="navbar-brand mx-4 mb-3">
-                     <h3 class="text-primary"><i class="fa-solid fa-hammer"></i>  {!!nl2br('DASHMIN')!!}   </h3>
+                     <h3 class="text-primary"><i class="fa-solid fa-circle-dollar-to-slot"></i>   {!!nl2br('DONATE')!!}   </h3>
                  </a>
                  <div class="d-flex align-items-center ms-4 mb-4">
                      <div class="position-relative">
@@ -138,9 +138,9 @@
                      <div class="nav-item dropdown">
                          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Fund</a>
                          <div class="dropdown-menu bg-transparent border-0">
-                             <a href="{{url('category')}}" onclick="myFunction()" id="one" class="dropdown-item holder">Category</a>
+                             <a href="{{url('category')}}" onclick="myFunction()" id="one" class="dropdown-item holder">Add Category</a>
                              <a href="{{url('categorylist')}}" id="two" class="dropdown-item holder">Category list</a>
-                             <a href="{{url('addfund')}}" id="three" class="dropdown-item holder">AddFund</a>         
+                             <a href="{{url('addfund')}}" id="three" class="dropdown-item holder">Add Fund</a>         
                              <a href="{{url('fundlist')}}" id="four" class="dropdown-item holder">Fundlist</a>         
                          </div>
                      </div>
@@ -169,7 +169,7 @@
                     </div>
 
                     
-                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Balance Sheet</a>
+                     <a href="{{url('balance')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Balance Sheet</a>
                
                  </div>
              </nav>
@@ -310,7 +310,7 @@
  
              <!-- Footer Start -->
              <div class="container-fluid pt-4 px-4">
-                 <div class="bg-light rounded-top p-4">
+                 {{-- <div class="bg-light rounded-top p-4">
                      <div class="row">
                          <div class="col-12 col-sm-6 text-center text-sm-start">
                              &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
@@ -320,7 +320,7 @@
                              Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                          </div>
                      </div>
-                 </div>
+                 </div> --}}
              </div>
              <!-- Footer End -->
          </div>

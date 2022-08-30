@@ -137,9 +137,9 @@ Route::get('/editfund/{id}',[HomeController::class,'editfund']);
 Route::post('/updatefund/{id}',[HomeController::class,'updatefund']);
 
 
+//Balance sheet
 
-
-
+Route::get('/balance',[ProjectController::class,'balance']);
 
 
 
