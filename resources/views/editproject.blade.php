@@ -36,7 +36,7 @@
         @foreach ($userdata as $item)
             
     
-        <option value="{{$item->id}}" selected>{{$item->name}}</option>
+        <option value="{{$item->id}}" @if($item->id==$editData->user_id) selected @endif >{{$item->name}}</option>
 
         @endforeach
       

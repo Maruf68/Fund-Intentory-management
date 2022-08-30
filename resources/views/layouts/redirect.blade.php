@@ -169,7 +169,7 @@
                     </div>
 
                     
-                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Balance Sheet</a>
                
                  </div>
              </nav>
