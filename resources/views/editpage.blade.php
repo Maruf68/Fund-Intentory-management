@@ -71,9 +71,26 @@
       <div class="form-group my-2">
         <label for="exampleInputPassword1">Payment status</label>
        <select  name="status" class="form-control"> 
-         <option value="1">Payment pending</option>
+
+        <option value="1" @if($showData->status==1) selected @endif >{{'Payment pending'}}
+        
+        </option>
+
+        <option value="2" @if($showData->status==2) selected @endif>{{'Payment completed'}}
+        
+        </option>
+
+        <option value="3" @if($showData->status==3) selected @endif>{{'Refunded'}}
+        
+        </option>
+
+
+
+
+
+         {{-- <option value="1">Payment pending</option>
          <option value="2">Payment completed</option>
-         <option value="3">Refunded</option>
+         <option value="3">Refunded</option> --}}
   
        
   </select>
