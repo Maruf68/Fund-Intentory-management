@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
+
+
+   public function __construct(){
+      $this->middleware('auth');
+  }
+
     public function costcategory(){
         return view('addCostCategory');
     }
@@ -88,9 +94,11 @@ class ProjectController extends Controller
 
       $data->user_id=$request->user_id;
 
+      $data->status=$request->status;
+
       $data->save();
 
-      return redirect()->back();
+      return redirect(url('projectlist'));
 
      }
 
@@ -132,6 +140,8 @@ class ProjectController extends Controller
       $data->description=$request->description;
 
       $data->user_id=$request->user_id;
+
+      $data->status=$request->status;
 
       $data-> save();
 
@@ -223,6 +233,8 @@ class ProjectController extends Controller
       $data->amount=$request->amount;
 
       $data->project_id=$request->project_id;
+
+      $data->status=$request->status;
 
 
       // $data->upload=$request->upload;

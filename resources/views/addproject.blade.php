@@ -44,13 +44,16 @@
     </div>
 
 
-    {{-- <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label"> Assign to </label>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Status </label>
         <select  name="status" class="form-control"> 
-          <option value="1">Active</option>
-          <option value="0">Inactive</option> 
+          <option value="0">Pending</option>
+          <option value="1">Processing</option> 
+          <option value="2">Completed</option> 
+          <option value="3">Cancelled</option> 
         </select>
-      </div> --}}
+      </div>
 
 
 

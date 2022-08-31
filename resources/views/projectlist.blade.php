@@ -19,6 +19,7 @@
         <th scope="col">Name</th>
         <th scope="col">description</th>
         <th scope="col">User</th>
+        <th scope="col">Status</th>
         <th scope="col">Modify</th>
         <th scope="col">Remove</th>
       </tr>
@@ -51,6 +52,22 @@
                 @endif 
       
           </td>
+
+   
+          <td>@if($data->status==0)
+            {{'Pending'}}      
+          
+          @elseif($data->status==1)
+          {{'Processing'}}
+
+          @elseif($data->status==2)
+          {{'Completed'}}
+
+          @elseif($data->status==3)
+          {{'Cancelled'}}
+
+          @endif
+          </td>
     
 
         <td><a href="{{url('editproject/'.$data->id)}}" class="btn btn-warning">Edit </a></td>
@@ -69,3 +86,7 @@
 
 
 @stop
+
+
+
+

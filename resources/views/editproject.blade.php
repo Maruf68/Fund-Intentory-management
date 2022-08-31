@@ -44,13 +44,21 @@
     </div>
 
 
-    {{-- <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label"> Assign to </label>
-        <select  name="status" class="form-control"> 
-          <option value="1">Active</option>
-          <option value="0">Inactive</option> 
-        </select>
-      </div> --}}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Status </label>
+      <select  name="status" class="form-control"> 
+        <option value="0" @if($editData->status==0) selected @endif >{{'Pending'}}</option>
+        <option value="1" @if($editData->status==1) selected @endif>{{'Processing'}}</option> 
+        <option value="2"@if($editData->status==2) selected @endif >{{'Completed'}}</option> 
+        <option value="3" @if($editData->status==3) selected @endif>{{'Cancelled'}}</option> 
+      </select>
+    </div>
+
+
+
+
+
+
 
 
 

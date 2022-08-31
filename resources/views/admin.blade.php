@@ -1,8 +1,12 @@
 
 
-  @extends('layouts.app')
+  @extends('layouts.app',['data'=>$data])
 
   @section('content')
+
+
+
+
 
        <h1 class="font-effect-emboss">Admin Dashboard</h1>
 

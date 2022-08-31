@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
+
    public function index(){
     $role=Auth::user()->role;
 
@@ -57,7 +63,8 @@ class HomeController extends Controller
    }
 
     public function admin(){
-        return view('admin');
+        $data= User::all('name');
+        return view('admin')->with('data',$data);
     }
   
 
@@ -72,7 +79,19 @@ class HomeController extends Controller
     }
 
     public function  submitfund(Request $request){
-            
+
+        $request->validate([
+            'name' => 'required',
+              'amount' => 'required',
+              'method' => 'required',
+              'date'  => 'required',
+              'd_name' => 'required',
+              'd_email' => 'required|email|exists:fundlists,email',
+              'd_phone' => 'required',
+
+ 
+
+               ]);
              
         $data = new Fundlist;
 

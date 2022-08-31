@@ -3,7 +3,7 @@
 
   @section('content')
 
-
+  <h1 class="font-effect-emboss">User Dashboard</h1>
 
   <h3 class="mb-0 heart" style="color: rgb(95, 197, 197)" ><strong>{{'Calender'}}</strong> </h3>
          
