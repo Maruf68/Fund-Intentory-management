@@ -6,8 +6,10 @@ use Session;
 use App\Models\User;
 use App\Models\Project;
 use App\Models\CostList;
+use App\Models\Fundlist;
 use App\Models\CostCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -249,7 +251,13 @@ class ProjectController extends Controller
       return redirect(url('costlist'));
      }
 
+
      public function balance(){
-      return view('balancesheet');
+
+      $showdata = DB::table("fundlists")->sum('amount');
+
+      $showcost = DB::table("cost_lists")->sum('amount');
+
+      return view('balancesheet')->with('showdata',$showdata)->with('showcost',$showcost);
      }
 }
