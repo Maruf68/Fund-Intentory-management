@@ -2,6 +2,11 @@
 
 @section('content')
 
+
+
+
+
+
 <div class="  mb-5 pb-5">
     <h3 class="change" style="color: rgb(95, 197, 197)" > <strong> Category List</strong></h3>
 
@@ -28,8 +33,13 @@
         @foreach($showdata as $key=>$data)
 
       <tr>
-        <th scope="row">{{$key+1}}</th>
+        {{-- <th scope="row">{{$key+1}}</th> --}}
+
+        <td>{{ $key + $showdata->firstItem() }}</td>
+
         <td>{{$data->name}}</td>
+
+        {{-- <td>{{ $key + $data->firstItem() }}</td> --}}
 
         <td>@if($data->status==1)
             {{'Active'}}      
@@ -47,8 +57,14 @@
 
     </tbody>
   </table>
-  {{ $showdata->links() }}
+  {!! $showdata->links() !!}
 
 </div>
+
+
+
+
+
+
 
 @stop

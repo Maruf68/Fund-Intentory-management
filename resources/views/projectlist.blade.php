@@ -27,7 +27,7 @@
     <tbody>
         @foreach($showdata as $key=>$data)
       <tr >
-        <th scope="row">{{$key+1}}</th>
+        <th scope="row">{{$key+ $showdata->firstItem() }}</th>
         <td>{{$data->name}}</td>
         <td>{{$data->description}}</td>
 
