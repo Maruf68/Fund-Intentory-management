@@ -5,7 +5,7 @@
   @section('content')
 
   
-  <h3 class="change mx-3" style="color: rgb(95, 197, 197)" > <strong> Project List</strong></h3>
+  <h3 class="change mx-3" style="color: rgb(95, 197, 197)" > <strong> Cost List</strong></h3>
   
   <style>
     .change {
