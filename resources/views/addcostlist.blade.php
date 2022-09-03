@@ -11,6 +11,13 @@
       font-family: "Audiowide", sans-serif;
     }
   </style>
+
+  
+@if (session('Costlist'))
+<div class="alert alert-success" role="alert">
+    {{ Session::get('Costlist') }}
+     </div>
+     @endif
    
    <form  action="{{url('/postcostlist')}}" method="post" class="my-3" enctype="multipart/form-data">
     @csrf

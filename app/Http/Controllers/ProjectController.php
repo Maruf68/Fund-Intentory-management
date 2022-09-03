@@ -182,6 +182,8 @@ class ProjectController extends Controller
 
 
       $data->save();
+
+      session()->flash('Costlist', 'Cost List Added');
       
       return redirect()->back();
 
