@@ -264,7 +264,7 @@
                              <img class="rounded-circle me-lg-2" src="/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                              <span class="d-none d-lg-inline-flex">
                       
-                            Admin
+                                {{ Auth::user()->name }}
                          </a>
                          <div class="dropdown-menu dropdown-menu-end bg-red border-0 rounded-0 rounded-bottom m-0">
                               <a href="#" class="dropdown-item">My Profile</a>

@@ -229,7 +229,6 @@ class ProjectController extends Controller
       $data = CostList::find($id);
      
 
-
       $data->name=$request->name;
 
       $data->amount=$request->amount;
