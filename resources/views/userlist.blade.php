@@ -2,6 +2,12 @@
 
 @section('content')
 
+
+@if (Auth::check() && (Auth::user()->role !== '2')) 
+
+
+
+
  <div class="  mb-5 pb-5">
 <h3 style="color: rgb(95, 197, 197)">Users List</h3>
  
@@ -37,8 +43,12 @@
 </div>
 
 
+@else
+
+<script>window.location = "/dashboard";</script>
 
 
+@endif
 
 
 @stop

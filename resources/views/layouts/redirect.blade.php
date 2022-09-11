@@ -152,9 +152,11 @@
  
  
                      {{-- <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a> --}}
+
+                     @if (Auth::check() && (Auth::user()->role !== '2')) 
                      <a href="{{url('user')}}"    class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add user</a>
                      <a href="{{url('userlist')}}"  class="nav-item nav-link"><i class="fa fa-table me-2"></i>Userlist</a>
-
+                     @endif
 
                      <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Project Costing</a>

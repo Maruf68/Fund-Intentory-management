@@ -11,6 +11,11 @@
       </div>  --}}
       
   
+      @if (Auth::check() && (Auth::user()->role !== '2')) 
+
+     
+
+
   
   <div class="card" style="width:28em " class="my-3 mx-5 py-3">
       <div class="card-body">
@@ -48,8 +53,15 @@
   
   </div>
   </div>
+
+
+  @else
+     
+  <script>window.location = "/dashboard";</script>
   
-  
+  @endif
+
+
   @stop
   
   

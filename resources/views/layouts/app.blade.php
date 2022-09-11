@@ -132,9 +132,15 @@
                          <span>Admin</span>
                      </div>
                  </div>
+
+                 
                  <div class="navbar-nav w-100">
+                    @if (Auth::check() && (Auth::user()->role !== '2')) 
                      <a href="{{url('/admin')}}" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
- 
+                       @else
+                       <a href="{{url('/dashboard')}}" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                        @endif
+
                      <div class="nav-item dropdown">
                          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Fund</a>
                          <div class="dropdown-menu bg-transparent border-0">
@@ -152,9 +158,11 @@
  
  
                      {{-- <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a> --}}
+
+                     @if (Auth::check() && (Auth::user()->role !== '2')) 
                      <a href="{{url('user')}}"    class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add user</a>
                      <a href="{{url('userlist')}}"  class="nav-item nav-link"><i class="fa fa-table me-2"></i>Userlist</a>
-
+                     @endif
 
                      <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Project Costing</a>
