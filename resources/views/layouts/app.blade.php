@@ -177,13 +177,26 @@
                     </div>
 
                     
-                     <a href="{{url('balance')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Balance Sheet</a>
+                     <a href="{{url('balance')}}" class="nav-item nav-link point"><i class="fa fa-chart-bar me-2"></i>Balance Sheet</a>
                
                  </div>
              </nav>
          </div>
          <!-- Sidebar End -->
  
+         <script>
+
+                var header = document.querySelector('.point');
+             
+
+                header.addEventListener('click', (event)=> {
+                
+                    header.classList.add("active");
+                    
+                
+                });
+              
+         </script>
  
  
    
