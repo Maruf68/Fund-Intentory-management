@@ -1,38 +1,7 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-
-=======
-@include('product_js')
-@extends('layouts.app')
-
-
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
-@section('content')
 
 
 
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
-<div class="  mb-5 pb-5">
-    <h3 class="change" style="color: rgb(95, 197, 197)" > <strong> Category List</strong></h3>
-
-
-<style>
-      .change {
-        font-family: "Audiowide", sans-serif;
-    }
-</style>
-
-
-<<<<<<< HEAD
-=======
-<div class="table-data">
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 <table class="table table-striped my-4 ">
     <thead>
       <tr class="table-success">
@@ -59,7 +28,7 @@
         <td>@if($data->status==1)
             {{'Active'}}      
        
-        @else($data->status==0)
+        @else
         {{'Inactive'}}
         @endif
        </td>
@@ -72,23 +41,12 @@
 
     </tbody>
   </table>
-  {!! $showdata->links() !!}
 
-</div>
-
-<<<<<<< HEAD
-=======
-</div>
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
+  {!! $showdata->render() !!}
 
 
 
 
 
 
-<<<<<<< HEAD
-@stop
-=======
 
-@stop
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)

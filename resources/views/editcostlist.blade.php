@@ -16,8 +16,11 @@
     @csrf
 
 
+<<<<<<< HEAD
        
 
+=======
+>>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"> Name</label>
         <input type="text" value="{{$showData->name}}" name="name" class="form-control" id="exampleInputPassword1">
@@ -49,7 +52,12 @@
    
       <div class="mb-3">
         <label for="exampleInputPassword1"  class="form-label"> Upload</label>
+<<<<<<< HEAD
         <input type="file" name="upload" class="form-control" id="exampleInputPassword1">
+=======
+        <input type="file" name="image" class="form-control" id="exampleInputPassword1">
+        <img src="{{asset('assets/'.$showData->image)}}" width="70px" height="70px" alt="Image">
+>>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
       </div>
  
       <input type="hidden" name="old_img" value="{{$showData->upload}}">

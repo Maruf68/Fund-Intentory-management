@@ -56,7 +56,11 @@
 
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"> Upload</label>
+<<<<<<< HEAD
         <input type="file" name="upload" class="form-control" id="exampleInputPassword1">
+=======
+        <input type="file" name="image" class="form-control" id="exampleInputPassword1">
+>>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
       </div>
 
 
