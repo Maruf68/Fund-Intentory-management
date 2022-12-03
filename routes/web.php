@@ -53,23 +53,18 @@ Route::get('/deletefund/{id}',[HomeController::class,'deletefund']);
 
 //category
 
-<<<<<<< HEAD
-=======
 Route::get('/pagination/paginate-data',[HomeController::class,'pagination']);
 
 Route::get('/categorylist',[HomeController::class,'categorylist']);
 
 
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
+Route::get('/searchProduct',[HomeController::class,'searchProduct']);
+
+
 Route::get('/category',[HomeController::class,'category']);
 
 Route::post('/submitcategory',[HomeController::class,'SubmitCategory']);
 
-<<<<<<< HEAD
-Route::get('/categorylist',[HomeController::class,'categorylist']);
-=======
-
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
 Route::get('/editcategory/{id}',[HomeController::class,'editcategory']);
 
@@ -121,10 +116,6 @@ Route::post('/postcostlist',[ProjectController::class,'postcostlist']);
 
 Route::get('/costlist',[ProjectController::class,'costlist']);
 
-<<<<<<< HEAD
-Route::get('/download/{upload}',[ProjectController::class,'download']);
-=======
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
 
 Route::get('/deletecostlist/{id}',[ProjectController::class,'deletecostlist']);
@@ -174,11 +165,8 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
  Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

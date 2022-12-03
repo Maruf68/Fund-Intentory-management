@@ -262,14 +262,6 @@ class HomeController extends Controller
 
     }
 
-<<<<<<< HEAD
-    public function categorylist(){
-        $showdata= Category::simplepaginate(5);
-        return view('categorylist')->with('showdata',$showdata);
-    }
-=======
-
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
     public function editcategory($id=null){
 
@@ -291,8 +283,6 @@ class HomeController extends Controller
     }
 
 
-<<<<<<< HEAD
-=======
     public function categorylist(){
         $showdata= Category::latest()->paginate(5);
         return view('categorylist')->with('showdata',$showdata);
@@ -305,5 +295,24 @@ class HomeController extends Controller
     }
 
 
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
+ public function searchProduct(Request $request){
+    $showdata = Category::where('name', 'like', '%'.$request->search_string.'%')
+    ->orwhere('status', 'like', '%'.$request->search_string.'%')
+    ->orderBy('id','desc')  
+    ->paginate(5);
+
+
+    if($showdata->count() >=1){
+        return view('categorylist_pagination',compact('showdata'))->render();
+    }
+    else{
+        return response()->json([
+            'status' => 'nothing found',
+        ]);
+    }
+
+ }
+    
+
+
 }

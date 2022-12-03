@@ -56,15 +56,9 @@
 
   
           <td>
-<<<<<<< HEAD
-            {{-- <iframe height="100"  width="100" src="/assets/{{$item->file}}"></iframe> --}}
-               {{$item->upload}}
-            <a href="{{url('/download',$item->upload)}}">Download</a>
-=======
             <img src="{{asset('assets/'.$item->image)}}" width="70px" height="70px" alt="Image">
                {{-- {{$item->upload}} --}}
        
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
           </td>
  
           <td>

@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-
-=======
 @include('product_js')
 @extends('layouts.app')
 
 
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 @section('content')
 
 
+<input class="form-control border-1 below" id="search" type="search" placeholder="Search">
 
 
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
-<div class="  mb-5 pb-5">
+<div class="  mb-5 pb-5 my-3">
     <h3 class="change" style="color: rgb(95, 197, 197)" > <strong> Category List</strong></h3>
 
 
@@ -29,16 +20,13 @@
 </style>
 
 
-<<<<<<< HEAD
-=======
 <div class="table-data">
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 <table class="table table-striped my-4 ">
     <thead>
       <tr class="table-success">
         <th scope="col">No.</th>
         <th scope="col">Name</th>
-        <th scope="col">Status</th>
+        <th id="status" scope="col">Status</th>
         <th scope="col">Modify</th>
         <th scope="col">Remove</th>
       </tr>
@@ -76,19 +64,25 @@
 
 </div>
 
-<<<<<<< HEAD
-=======
 </div>
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
+
+
+<style>
+
+  .below{
+    margin-top: 20px;
+  }
+</style>
 
 
 
 
 
 
-<<<<<<< HEAD
+
+
+
+
+
+
 @stop
-=======
-
-@stop
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)

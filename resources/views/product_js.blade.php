@@ -32,4 +32,30 @@
         })
      }
 
+
+
+
+     //Search
+
+     $(document).on('keyup',function(e){
+e.preventDefault();
+let search_string = $('#search').val();
+
+
+
+$.ajax({
+    url:"{{url('searchProduct')}}",
+    method:'GET',
+    data:{search_string:search_string},
+    success:function(res){
+        $('.table-data').html(res);
+        if(res.status=='nothing found'){
+            $('.table-data').html('<span class="text-danger">'+' Nothing Found' + ' </span>');
+        }
+    }
+});
+})
+
+
+
     </script>

@@ -28,7 +28,7 @@
 
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Category Status </label>
-      <select  name="status" class="form-control"> 
+      <select id="status"  name="status" class="form-control"> 
         <option value="1">Active</option>
         <option value="0">Inactive</option> 
       </select>

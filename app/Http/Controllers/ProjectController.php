@@ -10,10 +10,7 @@ use App\Models\Fundlist;
 use App\Models\CostCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\File;
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
 class ProjectController extends Controller
 {
@@ -170,15 +167,6 @@ class ProjectController extends Controller
       $data->project_id=$request->project_id;
 
  
-<<<<<<< HEAD
-      $file = $request->upload;
-      
-      $filename=time().'.'.$file->getClientOriginalExtension();
-
-      $request->upload->move('assets',$filename);
-
-      $data->upload=$filename;
-=======
 
       if($request->hasfile('image'))
       {
@@ -188,7 +176,6 @@ class ProjectController extends Controller
         $file->move('assets/',$filename);
         $data->image = $filename;
       }
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
 
 
@@ -212,17 +199,6 @@ class ProjectController extends Controller
      }
 
 
-<<<<<<< HEAD
-     public function download(Request $request,$upload)
-
-     {
-  
-       return response()->download(public_path('assets/'.$upload));
-  
-     }
-=======
-
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
 
      public function deletecostlist($id=null){
@@ -255,31 +231,12 @@ class ProjectController extends Controller
 
       $data->project_id=$request->project_id;
 
-<<<<<<< HEAD
-      $data->status=$request->status;
-=======
       // $data->status=$request->status;
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
 
 
       // $data->upload=$request->upload;
 
 
-<<<<<<< HEAD
-      $upload=$request->upload;
-  
-
-      if($upload){
-
-         $filename=time().'.'.$upload->getClientOriginalExtension();
-
-         $request->upload->move('assets',$filename);
-   
-         $data->upload=$filename;
-      }
-      else{
-     $data->upload=$request->old_img;
-=======
       if($request->hasfile('image'))
       {
         $destination = 'assets/'.$data->image;
@@ -294,7 +251,6 @@ class ProjectController extends Controller
         $file->move('assets/',$filename);
         $data->image = $filename;
 
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
       }
 
       

@@ -72,16 +72,10 @@
      <meta charset="utf-8">
      <title>DASHMIN - Bootstrap Admin Template</title>
      <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<<<<<<< HEAD
-     <meta content="" name="keywords">
-     <meta content="" name="description">
- 
-=======
      <meta name="csrf-token" content="{{ csrf_token() }}">
      <meta content="" name="keywords">
      <meta content="" name="description">
    
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
      <!-- Favicon -->
      <link href="img/favicon.ico" rel="icon">
  
@@ -220,9 +214,10 @@
                  <a href="#" class="sidebar-toggler flex-shrink-0">
                      <i class="fa fa-bars"></i>
                  </a>
-                 <form class="d-none d-md-flex ms-4">
-                     <input class="form-control border-0" type="search" placeholder="Search">
-                 </form>
+
+                 {{-- <form class="d-none d-md-flex ms-4"> --}}
+                    
+                 {{-- </form> --}}
                  <div class="navbar-nav align-items-center ms-auto">
                      <div class="nav-item dropdown">
                          {{-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -373,12 +368,9 @@
  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
  
  
-<<<<<<< HEAD
-=======
  
 
 
->>>>>>> f5b6fc2 (Category list is showing by ajax call and image is now showing)
  </body>
  
  </html>  
